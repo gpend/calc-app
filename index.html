@@ -5,75 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="calc.css">
   
   <title>Frontend Mentor | Calculator app</title>
 </head>
 <body>
   <div id="card">
+    <div class="header">
+      <div class="header-text">calc</div>
+      <div class="header-toggle">
+        <div class="toggle-text"> THEME </div>
+        <div class="toggle"></div>
+      </div>
+    </div>
+    <div id="display"></div>
     <table>
-      <tr>
-        <td>
-          7
-        </td>
-        <td>
-          8
-        </td>
-        <td>
-          9
-        </td>
-        <td>
-          DEL
-        </td>
+      <tr class="calc-row" border-spacing= 10px>
+        <td>7</td><td>8</td><td>9</td><td class="gray-key">DEL</td>
       </tr>
-      <tr>
-        <td>
-          4
-        </td>
-        <td>
-          5
-        </td>
-        <td>
-          6
-        </td>
-        <td>
-          +
-        </td>
+      <tr class="calc-row">
+        <td>4</td><td>5</td><td>6</td><td>+</td>
       </tr>
-      <tr>
-        <td>
-          1
-        </td>
-        <td>
-          2
-        </td>
-        <td>
-          3
-        </td>
-        <td>
-          -
-        </td>
+      <tr class="calc-row">
+        <td>1</td><td>2</td><td>3</td><td>-</td>
       </tr>
-      <tr>
-        <td>
-          .
-        </td>
-        <td>
-          0
-        </td>
-        <td>
-          /
-        </td>
-        <td>
-          X
-        </td>
+      <tr class="calc-row">
+        <td>.</td><td>0</td><td>/</td><td>*</td>
       </tr>
-      <tr>
-        <td>
-          .RESET
+      <tr id= "last-row">
+        <td colspan="2" class="gray-key">
+          RESET
         </td>
-        <td>
-          DEL
+        <td colspan="2" class="red-key">
+          =
         </td>
       </tr>
     </table>
