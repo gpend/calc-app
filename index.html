@@ -13,14 +13,27 @@
   <title>Frontend Mentor | Calculator app</title>
 </head>
 <body>
+
+
   <div id="card">
-    <div class="header">
+
+
+    <div class="header"><!--row-->
       <div class="header-text">calc</div>
-      <div class="header-toggle">
+      <div class="header-toggle"><!--row-->
         <div class="toggle-text"> THEME </div>
-        <div class="toggle"></div>
-      </div>
-    </div>
+        <div class="toggle-col"><!--col-->
+          <div class="theme-ids"><!--row-->
+            <div class="theme-number">1</div>
+            <div class="theme-number">2</div>
+            <div class="theme-number">3</div>
+          </div><!--theme-ids-->
+        <div class="toggle-trough"></div>
+      </div><!--toggle-col-->
+      </div><!--header-toggle-->
+    </div><!--header-->
+
+
     <div id="display"></div>
     <table>
       <tr class="calc-row" border-spacing= 10px>
@@ -33,7 +46,7 @@
         <td>1</td><td>2</td><td>3</td><td>-</td>
       </tr>
       <tr class="calc-row">
-        <td>.</td><td>0</td><td>/</td><td>*</td>
+        <td>.</td><td>0</td><td>/</td><td>X</td>
       </tr>
       <tr id= "last-row">
         <td colspan="2" class="gray-key">
