@@ -78,6 +78,98 @@ body{
     border-radius: inherit;
 }
 
+/*###################################################*/
+
+.pushable {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    width: 100%;
+    height: 100%;
+  }
+  .shadow {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background-color: hsl(28, 16%, 65%);
+    /* background-color: hsl(0deg 0% 0% / 0.25); */
+    will-change: transform;
+    transform: translateY(2px);
+    transition:
+      transform
+      600ms
+      cubic-bezier(.3, .7, .4, 1);
+  }
+  .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    /* background: linear-gradient(
+      to left,
+      hsl(340deg 100% 16%) 0%,
+      hsl(340deg 100% 32%) 8%,
+      hsl(340deg 100% 32%) 92%,
+      hsl(340deg 100% 16%) 100% 
+    ); */
+  }
+  .front {
+    display: block;
+    position: relative;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 2.5rem;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    color: black;
+    background: hsl(30, 25%, 89%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition:
+      transform
+      600ms
+      cubic-bezier(.3, .7, .4, 1);
+  }
+  /* .pushable:hover {
+    filter: brightness(110%);
+  }
+  .pushable:hover .front {
+    transform: translateY(-6px);
+    transition:
+      transform
+      250ms
+      cubic-bezier(.3, .7, .4, 1.5);
+  } */
+  .pushable:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+  /* .pushable:hover .shadow {
+    transform: translateY(4px);
+    transition:
+      transform
+      250ms
+      cubic-bezier(.3, .7, .4, 1.5);
+  } */
+  .pushable:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+  }
+  .pushable:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+/*###################################################*/
+
 table{
     border-spacing: 20px;
     background-color: hsl(223, 31%, 20%);
@@ -88,9 +180,9 @@ table td{
     width: 25%;
     height: 2em;
     font-size: 2em;
-    background-color: hsl(30, 25%, 89%);
+    /* background-color: hsl(30, 25%, 89%);
     text-align: center;
-    border-radius: 15px;
+    border-radius: 15px; */
 }
 
 table .gray-key{
@@ -118,3 +210,8 @@ table .red-key{
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+
+/* special thanks to 
+https://www.joshwcomeau.com/animation/3d-button/#color-and-aesthetics
+for the awesome button tutorial  */
