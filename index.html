@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/segment7" type="text/css"/>
   <link rel="stylesheet" href="calc.css">
   
   <title>Frontend Mentor | Calculator app</title>
@@ -34,11 +35,11 @@
     </div><!--header-->
 
 
-    <div id="display"></div>
+    <div id="display"><p>0</p></div>
     <table>
       <tr class="calc-row">
         <td>
-          <button class="pushable">
+          <button class="pushable" id="button_7">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front">
@@ -47,7 +48,7 @@
           </button>
         </td>
         <td>
-          <button class="pushable">
+          <button class="pushable" id="button_8">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front">
@@ -56,7 +57,7 @@
           </button>
         </td>
         <td>
-          <button class="pushable">
+          <button class="pushable" id="button_9">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front">
@@ -65,10 +66,12 @@
           </button>
         </td>
         <td class="gray-key">
-          <button class="pushable">
+          <button class="pushable" id="button_delete">
             <span class="shadow"></span>
             <span class="edge"></span>
-            <span class="front">
+            <span class="front" style="
+              padding-left: 0px;
+              padding-right: 0px;">
               DEL
             </span>
           </button>
@@ -76,7 +79,7 @@
       </tr>
       <tr class="calc-row">
         <td>
-          <button class="pushable">
+          <button class="pushable" id="button_4">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front">
@@ -85,7 +88,7 @@
           </button>
         </td>
         <td>
-          <button class="pushable">
+          <button class="pushable" id="button_5">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front">
@@ -94,7 +97,7 @@
           </button>
         </td>
         <td>
-          <button class="pushable">
+          <button class="pushable" id="button_6">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front">
@@ -103,7 +106,7 @@
           </button>
         </td>
         <td>
-          <button class="pushable">
+          <button class="pushable" id="button_plus">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front">
@@ -114,7 +117,7 @@
       </tr>
       <tr class="calc-row">
       <td>
-        <button class="pushable">
+        <button class="pushable" id="button_1">
           <span class="shadow"></span>
           <span class="edge"></span>
           <span class="front">
@@ -123,7 +126,7 @@
         </button>
       </td>
       <td>
-        <button class="pushable">
+        <button class="pushable" id="button_2">
           <span class="shadow"></span>
           <span class="edge"></span>
           <span class="front">
@@ -132,7 +135,7 @@
         </button>
       </td>
       <td>
-        <button class="pushable">
+        <button class="pushable" id="button_3">
           <span class="shadow"></span>
           <span class="edge"></span>
           <span class="front">
@@ -141,7 +144,7 @@
         </button>
       </td>
       <td>
-        <button class="pushable">
+        <button class="pushable" id="button_minus">
           <span class="shadow"></span>
           <span class="edge"></span>
           <span class="front">
@@ -152,24 +155,60 @@
       </tr>
       <tr class="calc-row">
         <td>
-          .
-          </td
-          ><td>
-          0
+          <button class="pushable" id="button_dot">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+              .
+            </span>
+          </button>
         </td>
         <td>
-          /
+          <button class="pushable" id="button_0">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+              0
+            </span>
+          </button>
         </td>
         <td>
-          X
+          <button class="pushable" id="button_divide">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+              /
+            </span>
+          </button>
+        </td>
+        <td>
+          <button class="pushable" id="button_multiply">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+              X
+            </span>
+          </button>
         </td>
       </tr>
       <tr id= "last-row">
         <td colspan="2" class="gray-key">
-          RESET
+          <button class="pushable" id="button_reset">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+              RESET
+            </span>
+          </button>
         </td>
         <td colspan="2" class="red-key">
-          =
+          <button class="pushable" id="button_equals">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+              =
+            </span>
+          </button>
         </td>
       </tr>
     </table>
@@ -180,4 +219,5 @@
     Coded by <a href="https://github.com/gpend">Greg Pendleton</a>.
   </div>
 </body>
+<script src="calculator.js"></script>
 </html>
