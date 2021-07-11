@@ -1,43 +1,40 @@
 const pushables = document.querySelectorAll('.pushable')
 const display = document.querySelector('#display p')
-let num1 = []
-let num2 = []
+let numbers = []
 
 
 function calculate (num) {
-    if (num == '+'){
-
+    if (num == 'RESET'){
+        numbers = []
+        display.innerText = 0
     }
-    else if (num == '-'){
 
-    }
-    else if (num == 'X'){
-
-    }
-    else if (num == '/'){
-
-    }
-    else if (num == 'RESET'){
-
-    }
     else if (num == 'DEL'){
-
+        numbers.pop()
+        toDisplay = numbers.join('')
+        display.innerText = toDisplay
     }
-    else if (num == '='){
 
+    else if (num == 'X'){
+        numbers.push('*')
+        toDisplay = numbers.join('')
+        display.innerText = toDisplay
     }
-    else if (num == '.'){
 
+    else if (num == '='){ 
+        numbersToDisplay = numbers.join('')
+        toDisplay = eval(numbersToDisplay)
+        display.innerText = toDisplay
+        console.log(typeof(toDisplay))
+        numbers = (toDisplay.toString()).split('') 
+        // console.log(numbers)
     }
-    else if (Number.isInteger(num)){
 
-    }
     else{
-
+        numbers.push(num)
+        toDisplay = numbers.join('')
+        display.innerText = toDisplay
     }
-    
-
-
 }
 
 
@@ -50,25 +47,3 @@ pushables.forEach(btn => {
         calculate( event.target.innerText );
    })
 })
-
-
-
-/*
-get events
-add int or symbol to list, convert X to *
-concatenate list to display list - .join
-equals triggers eval() - 
-reset clears list
-del removes the last item
-
-num1 = []
-num2 = []
-
-
-var calc = "123+456"
-calc
-"123+456"
-eval(calc)
-579
-*/
-
