@@ -2,6 +2,15 @@ const pushables = document.querySelectorAll('.pushable')
 const display = document.querySelector('#display p')
 let numbers = []
 
+// function convertNumbersAndDisplay(itemToDisplay){
+//     toDisplay = itemToDisplay.join('')
+//     if (toDisplay.length >= 12){
+//         toDisplay = toDisplay.toExponential()
+//     }
+//     display.innerText = toDisplay
+// }
+
+// need to split the numbers between operations
 
 function calculate (num) {
     if (num == 'RESET'){
@@ -36,11 +45,6 @@ function calculate (num) {
         display.innerText = toDisplay
     }
 }
-
-
-
-
-
 
 pushables.forEach(btn => {
     btn.addEventListener('click', (event) => {
