@@ -1,6 +1,7 @@
 const pushables = document.querySelectorAll('.pushable')
 const display = document.querySelector('#display p')
 let numbers = []
+let theme = 1
 
 // function convertNumbersAndDisplay(itemToDisplay){
 //     toDisplay = itemToDisplay.join('')
@@ -51,3 +52,11 @@ pushables.forEach(btn => {
         calculate( event.target.innerText );
    })
 })
+
+// if ( 2 == 2 ){
+//     theme += 1
+// }
+
+// else{
+//     theme = 1
+// }

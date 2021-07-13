@@ -1,3 +1,11 @@
+:root{
+  --equals-color:hsl(6, 63%, 50%);
+  --equals-shadow: hsl(6, 70%, 34%);
+  --highlight-color: hsl(225, 21%, 49%);
+  --highlight-shadow: hsl(224, 28%, 35%);
+  --key-front-color: hsl(30, 25%, 89%);
+  --key-shadow: hsl(28, 16%, 65%);
+}
 @font-face {
   font-family: '16segments-basic';
   src: url('images/16_segments/16Segments-Basic.woff');}
@@ -29,7 +37,7 @@ body{
 }
 
 .header .header-text{
-    font-size: larger;
+    font-size: xx-large;
     order:1;
     align-self: center;
 }
@@ -70,7 +78,19 @@ body{
     width: 50px;
     background-color: hsl(223, 31%, 20%);
     border-radius: 20px;
+    display: flex;
     /* position: absolute; */
+}
+
+.toggle-trough .toggle-dot{
+  content: "";
+  height: 15px;
+  width: 15px;
+  border: 1px solid #7b7777;
+  border-radius: 100%;
+  background-color: var(--equals-color);
+  align-self: center;
+  margin-left: 0  /* 30%, auto */
 }
 
 #display{
@@ -93,6 +113,7 @@ body{
   bottom: 55px;
   /* right: 10px; */
   margin-left: auto;
+  margin-right: 5px;
   width: 95%;
   height: 70%;
   text-align: right;
@@ -119,7 +140,7 @@ body{
     width: 100%;
     height: 100%;
     border-radius: 12px;
-    background-color: hsl(28, 16%, 65%);
+    background-color: var(--key-shadow);
     /* background-color: hsl(0deg 0% 0% / 0.25); */
     will-change: transform;
     transform: translateY(2px);
@@ -152,7 +173,7 @@ body{
     font-family: 'Spartan', sans-serif;
     font-weight: 700;
     color: black;
-    background: hsl(30, 25%, 89%);
+    background: var(--key-shadow);
     will-change: transform;
     transform: translateY(-4px);
     transition:
@@ -206,22 +227,22 @@ table td{
     border-radius: 15px; */
 }
  
-.gray-key .front{
-    background-color:hsl(225, 21%, 49%);
+.highlight-key .front{
+    background-color:var(--highlight-color);
     color: white;
 }
 
-.gray-key .shadow{
-  background-color:hsl(224, 28%, 35%);
+.highlight-key .shadow{
+  background-color:var(--highlight-shadow);
 }
 
-.red-key .front{
-    background-color:  hsl(6, 63%, 50%);
+.equals-key .front{
+    background-color:  var(--equals-color);
     color: white;
 }
 
-.red-key .shadow{
-    background-color: hsl(6, 70%, 34%);
+.equals-key .shadow{
+    background-color: var(--equals-shadow);
 }
 
 
