@@ -66,20 +66,23 @@ The designs were created to the following widths:
 
 #### Keys
 
+highlight
 - Dark violet (key background): hsl(281, 89%, 26%)
 - Vivid magenta (key shadow): hsl(285, 91%, 52%)
 
+equals
 - Pure cyan (key background, toggle): hsl(176, 100%, 44%)
 - Soft cyan (key shadow): hsl(177, 92%, 70%)
 
+main
 - Very dark violet (key background): hsl(268, 47%, 21%)
 - Dark magenta (key shadow): hsl(290, 70%, 36%)
 
 #### Text
 
-- Light yellow: hsl(52, 100%, 62%)
-- Very dark blue: hsl(198, 20%, 13%)
-- White (text): hsl(0, 0, 100%)
+- Light yellow(mein keys, display, header): hsl(52, 100%, 62%)
+- Very dark blue(equals): hsl(198, 20%, 13%)
+- White (text)(highlight keys): hsl(0, 0, 100%)
 
 ## Typography
 
