@@ -1,18 +1,61 @@
-:root{
+.theme1{
   --equals-color:hsl(6, 63%, 50%);
   --equals-shadow: hsl(6, 70%, 34%);
+  --equals-key-text: white;
+  --key-text: black;
+  --highlight-key-text: white;
   --highlight-color: hsl(225, 21%, 49%);
   --highlight-shadow: hsl(224, 28%, 35%);
   --key-front-color: hsl(30, 25%, 89%);
   --key-shadow: hsl(28, 16%, 65%);
+  --main-background-color: hsl(222, 26%, 31%);
+  --header-text-color: white;
+  --display-text-color: hsl(220, 6%, 46%);
+  --display-color: hsl(224, 36%, 15%);
+  --calc-body-color: hsl(223, 31%, 20%);
 }
+
+.theme2{
+  --equals-color: hsl(25, 98%, 40%);
+  --equals-shadow: hsl(25, 99%, 27%);
+  --equals-key-text: white;
+  --key-text: hsl(60, 10%, 19%);
+  --highlight-key-text: white;
+  --highlight-color: hsl(185, 42%, 37%);
+  --highlight-shadow: hsl(185, 58%, 25%);
+  --key-front-color: hsl(45, 7%, 89%);
+  --key-shadow: hsl(35, 11%, 61%);
+  --main-background-color: hsl(0, 0%, 90%);
+  --header-text-color: hsl(60, 10%, 19%);
+  --display-text-color: hsl(60, 10%, 19%);
+  --display-color: hsl(0, 0%, 93%);
+  --calc-body-color: hsl(0, 5%, 81%);
+}
+
+.theme3{
+  --equals-color: hsl(176, 100%, 44%);
+  --equals-shadow: hsl(177, 92%, 70%);
+  --equals-key-text: hsl(198, 20%, 13%);
+  --key-text: hsl(52, 100%, 62%);
+  --highlight-key-text: white;
+  --highlight-color: hsl(281, 89%, 26%);
+  --highlight-shadow: hsl(285, 91%, 52%);
+  --key-front-color: hsl(268, 47%, 21%);
+  --key-shadow: hsl(290, 70%, 36%);
+  --main-background-color: hsl(268, 75%, 9%);
+  --header-text-color: hsl(52, 100%, 62%);
+  --display-text-color: hsl(52, 100%, 62%);
+  --display-color: hsl(268, 71%, 12%);
+  --calc-body-color: hsl(268, 71%, 12%);
+}
+
 @font-face {
   font-family: '16segments-basic';
   src: url('images/16_segments/16Segments-Basic.woff');}
 
 body{
     width: 1440px;
-    background-color: hsl(222, 26%, 31%);
+    background-color: var(--main-background-color);
     font-family: 'Spartan', sans-serif;
     font-weight: 700;
 }
@@ -28,7 +71,7 @@ body{
     margin: 20px 0px;
     display: flex;
     flex-direction: row;
-    color: white;
+    color: var(--header-text-color);
     width: 100%;
     align-content: center;
     justify-content: space-between;
@@ -75,8 +118,8 @@ body{
 
 .header .toggle-trough{
     height: 20px;
-    width: 50px;
-    background-color: hsl(223, 31%, 20%);
+    width: 70px;
+    background-color: var(--calc-body-color);
     border-radius: 20px;
     display: flex;
     /* position: absolute; */
@@ -99,8 +142,8 @@ body{
     align-self: center;
     height: 100px;
     margin-bottom: 10px;
-    background-color: hsl(224, 36%, 15%);
-    color: hsl(220, 6%, 46%);
+    background-color: var(--display-color);
+    color: var(--display-text-color);
     border-radius: inherit;
     font-family: '16segments-basic', 'Segment7Standard';
     font-size: 50pt;
@@ -172,8 +215,8 @@ body{
     font-size: 2.5rem;
     font-family: 'Spartan', sans-serif;
     font-weight: 700;
-    color: black;
-    background: var(--key-shadow);
+    color: var(--key-text);
+    background: var(--key-front-color);
     will-change: transform;
     transform: translateY(-4px);
     transition:
@@ -214,7 +257,7 @@ body{
 
 table{
     border-spacing: 20px;
-    background-color: hsl(223, 31%, 20%);
+    background-color: var(--calc-body-color);
     border-radius: inherit;
 }
 
@@ -229,7 +272,7 @@ table td{
  
 .highlight-key .front{
     background-color:var(--highlight-color);
-    color: white;
+    color: var(--highlight-key-text);
 }
 
 .highlight-key .shadow{
@@ -238,7 +281,7 @@ table td{
 
 .equals-key .front{
     background-color:  var(--equals-color);
-    color: white;
+    color: var(--equals-key-text);
 }
 
 .equals-key .shadow{
