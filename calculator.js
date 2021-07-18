@@ -63,26 +63,28 @@ pushables.forEach(btn => {
 // else{
 //     theme = 1
 // }
-
 let toggle_dot = $(".toggle-trough .toggle-dot")
 toggle_dot.draggable({
     axis: 'x',
     containment: 'parent',
      stop: function() {
-        let switchPosition = document.querySelector('.toggle-dot').style["left"]    
+        let switchPosition = document.querySelector('.toggle-dot').style["left"]  
         switchCurrentPosition = switchPosition.replace('px','');
         switchCurrentPosition = parseInt(switchCurrentPosition)
         if (switchCurrentPosition < 14){
             //theme1 snap to 2
-            console.log("theme1")
+            document.querySelector('.toggle-dot').style["left"] = "2px"
+            document.querySelector("body").id = "theme1"
         }
-        else if (switchCurrentPosition >= 14 && switchCurrentPosition <= 33){
+        else if (switchCurrentPosition >= 14 && switchCurrentPosition <= 35){
             //theme2 snap to 23
-            console.log("theme2")
+            document.querySelector('.toggle-dot').style["left"] = "23px"
+            document.querySelector("body").id = "theme2"
         }
-        else if (switchCurrentPosition > 33){
+        else if (switchCurrentPosition > 35){
             //theme3 snap to 52
-            console.log("theme3")
+            document.querySelector('.toggle-dot').style["left"] = "52px"
+            document.querySelector("body").id = "theme3"
         }
     }
   });

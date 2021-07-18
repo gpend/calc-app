@@ -1,4 +1,4 @@
-.theme1{
+#theme1{
   --equals-color:hsl(6, 63%, 50%);
   --equals-shadow: hsl(6, 70%, 34%);
   --equals-key-text: white;
@@ -15,7 +15,7 @@
   --calc-body-color: hsl(223, 31%, 20%);
 }
 
-.theme2{
+#theme2{
   --equals-color: hsl(25, 98%, 40%);
   --equals-shadow: hsl(25, 99%, 27%);
   --equals-key-text: white;
@@ -32,7 +32,7 @@
   --calc-body-color: hsl(0, 5%, 81%);
 }
 
-.theme3{
+#theme3{
   --equals-color: hsl(176, 100%, 44%);
   --equals-shadow: hsl(177, 92%, 70%);
   --equals-key-text: hsl(198, 20%, 13%);
