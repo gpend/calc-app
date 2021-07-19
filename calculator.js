@@ -11,10 +11,8 @@ let theme = 1
 //     display.innerText = toDisplay
 // }
 
-// need to split the numbers between operations
+// TODO split the numbers between operations
 
-//TODO theme switcher
-//TODO draggable switch
 
 function calculate (num) {
     if (num == 'RESET'){
@@ -88,8 +86,3 @@ toggle_dot.draggable({
         }
     }
   });
-
-
-     // stop: function() {
-    //   conditionMove();
-    // }
