@@ -12,7 +12,8 @@ let theme = 1
 // }
 
 // TODO split the numbers between operations
-
+// TODO remember theme via `prefers-color-scheme` in browser
+// TODO make the theme dot clickable
 
 function calculate (num) {
     if (num == 'RESET'){
