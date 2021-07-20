@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![My beautiful calculator](./images/screenshot.jpg)
+![My beautiful calculator](./images/Screenshot.jpg)
 
 ### Links
 
