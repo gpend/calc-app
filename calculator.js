@@ -1,6 +1,7 @@
 const pushables = document.querySelectorAll('.pushable')
 const display = document.querySelector('#display p')
-let numbers = []
+let numbersNew = ""
+let operation = ""
 let theme = 1
 
 // function convertNumbersAndDisplay(itemToDisplay){
@@ -15,37 +16,67 @@ let theme = 1
 // TODO remember theme via `prefers-color-scheme` in browser
 // TODO make the theme dot clickable
 
+function preformCalculation(operation){
+    sessionStorage.setItem('operation', operation)
+    let numbersOld = sessionStorage.getItem('numbersNew')
+    sessionStorage.setItem('numbersOld',numbersOld)
+    numbersNew = ''
+    sessionStorage.setItem('numbersNew', numbersNew)
+    display.innerText = numbersNew
+}
+
 function calculate (num) {
     if (num == 'RESET'){
-        numbers = []
+        sessionStorage.setItem('numbersNew', '')
+        sessionStorage.setItem('numbersOld', '')
         display.innerText = 0
     }
 
     else if (num == 'DEL'){
-        numbers.pop()
-        toDisplay = numbers.join('')
-        display.innerText = toDisplay
+        let numbersNew = sessionStorage.getItem('numbersNew')
+        numbersNew = numbersNew.slice(0,-1)
+        sessionStorage.setItem('numbersNew', numbersNew)
+        display.innerText = numbersNew
     }
 
     else if (num == 'X'){
-        numbers.push('*')
-        toDisplay = numbers.join('')
-        display.innerText = toDisplay
+        operation = '*'
+        preformCalculation(operation)
+    }
+
+    else if (num == '-'){
+        operation = '-'
+        preformCalculation(operation)
+    }
+
+    else if (num == '+'){
+        operation = '+'
+        preformCalculation(operation)
+    }
+
+    else if (num == '/'){
+        operation = '/'
+        preformCalculation(operation)
     }
 
     else if (num == '='){ 
-        numbersToDisplay = numbers.join('')
-        toDisplay = eval(numbersToDisplay)
-        display.innerText = toDisplay
-        console.log(typeof(toDisplay))
-        numbers = (toDisplay.toString()).split('') 
+        let numbersOld = sessionStorage.getItem('numbersOld')
+        let numbersNew = sessionStorage.getItem('numbersNew')
+        let operation = sessionStorage.getItem('operation')
+        let mathSet = numbersOld + operation + numbersNew
+        let total  = eval(mathSet)
+        display.innerText = total
+        numbersNew = total
+        sessionStorage.setItem('numbersNew',total)
+
         // console.log(numbers)
     }
 
     else{
-        numbers.push(num)
-        toDisplay = numbers.join('')
-        display.innerText = toDisplay
+        let numbersNew = sessionStorage.getItem('numbersNew')
+        numbersNew += num
+        sessionStorage.setItem('numbersNew', numbersNew)
+        display.innerText = numbersNew
     }
 }
 
