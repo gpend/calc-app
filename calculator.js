@@ -79,6 +79,8 @@ function calculate (num) {
         display.innerText = numbersNew
     }
 }
+// setting up sessionstorage to avoid a null message
+sessionStorage.setItem('numbersNew', '')
 
 pushables.forEach(btn => {
     btn.addEventListener('click', (event) => {
