@@ -12,7 +12,6 @@ let theme = 1
 //     display.innerText = toDisplay
 // }
 
-// TODO split the numbers between operations
 // TODO remember theme via `prefers-color-scheme` in browser
 // TODO make the theme dot clickable
 
@@ -96,6 +95,50 @@ pushables.forEach(btn => {
 //     theme = 1
 // }
 let toggle_dot = $(".toggle-trough .toggle-dot")
+let themeID1 = $("#1")
+let themeID2 = $("#2")
+let themeID3 = $("#3")
+let toggle_trough = $(".toggle-trough")
+
+function toggleTheme(theme){
+    if (theme == 1){
+        document.querySelector('.toggle-dot').style["left"] = "2px"
+        document.querySelector("body").id = "theme1"
+    }
+    else if (theme == 2){
+        document.querySelector('.toggle-dot').style["left"] = "23px"
+        document.querySelector("body").id = "theme2"
+    }
+    else if (theme == 3){
+        document.querySelector('.toggle-dot').style["left"] = "52px"
+        document.querySelector("body").id = "theme3"
+    }
+}
+
+themeID1.click( function () {
+    toggleTheme(1)
+})
+ themeID2.click( function () {
+    toggleTheme(2)
+})
+themeID3.click( function () {
+    toggleTheme(3)
+})
+
+toggle_trough.click( function () {
+    let themeVar = $(".theme")[0]["id"]
+    themeVar = parseInt(themeVar.slice(-1))
+    if (themeVar == 1){
+        toggleTheme(2)
+    }
+    else if (themeVar == 2){
+        toggleTheme(3)
+    }
+    else if (themeVar == 3){
+        toggleTheme(1)
+    }
+})
+
 toggle_dot.draggable({
     axis: 'x',
     containment: 'parent',
@@ -105,18 +148,15 @@ toggle_dot.draggable({
         switchCurrentPosition = parseInt(switchCurrentPosition)
         if (switchCurrentPosition < 14){
             //theme1 snap to 2
-            document.querySelector('.toggle-dot').style["left"] = "2px"
-            document.querySelector("body").id = "theme1"
+            toggleTheme(1)
         }
         else if (switchCurrentPosition >= 14 && switchCurrentPosition <= 35){
             //theme2 snap to 23
-            document.querySelector('.toggle-dot').style["left"] = "23px"
-            document.querySelector("body").id = "theme2"
+            toggleTheme(2)
         }
         else if (switchCurrentPosition > 35){
             //theme3 snap to 52
-            document.querySelector('.toggle-dot').style["left"] = "52px"
-            document.querySelector("body").id = "theme3"
+            toggleTheme(3)
         }
     }
   });
