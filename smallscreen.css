@@ -175,7 +175,7 @@ body{
     left: 0;
     width: 100%;
     height: 90%;
-    border-radius: 2px;
+    border-radius: 6px;
     background-color: var(--key-shadow);
     will-change: transform;
     transform: translateY(2px);
@@ -190,7 +190,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 2px;
+    border-radius: 6px;
     /* background: linear-gradient(
       to left,
       hsl(340deg 100% 16%) 0%,
@@ -203,7 +203,7 @@ body{
     display: block;
     position: relative;
     padding: 2px 2px;
-    border-radius: 2px;
+    border-radius: 6px;
     font-size: 1.3rem;
     font-family: 'Spartan', sans-serif;
     font-weight: 20;
@@ -257,7 +257,6 @@ table{
 
 table td{
     width: 25%;
-
     font-size: 2em;
 }
  
