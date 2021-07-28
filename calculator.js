@@ -15,9 +15,6 @@ if (storageTheme != null){
 //     display.innerText = toDisplay
 // }
 
-// TODO remember theme via `prefers-color-scheme` in browser
-// TODO make the theme dot clickable
-
 function preformCalculation(operation){
     sessionStorage.setItem('operation', operation)
     let numbersOld = sessionStorage.getItem('numbersNew')
