@@ -56,7 +56,6 @@
   src: url('images/16_segments/16Segments-Basic.woff');}
 
 body{
-    width: 1440px;
     background-color: var(--main-background-color);
     font-family: 'Spartan', sans-serif;
     font-weight: 700;
@@ -65,7 +64,7 @@ body{
 #card{
     display:flex;
     flex-direction: column;
-    width: 40%;
+    width: 565px;
     margin: auto;
     border-radius: 15px;
 }
@@ -251,11 +250,11 @@ table{
     border-spacing: 20px;
     background-color: var(--calc-body-color);
     border-radius: inherit;
+    margin-top: 15px;
 }
 
 table td{
     width: 25%;
-    height: 2em;
     font-size: 2em;
 }
  
