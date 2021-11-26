@@ -3,7 +3,7 @@ const display = document.querySelector('#display p')
 let numbersNew = ""
 let operation = ""
 let theme = 1
-let storageTheme = localStorage.getItem("theme")
+let storageTheme = localStorage.getItem(`prefers-color-scheme`)
 if (storageTheme != null){
     toggleTheme(parseInt(storageTheme))
 }
@@ -14,9 +14,6 @@ if (storageTheme != null){
 //     }
 //     display.innerText = toDisplay
 // }
-
-// TODO remember theme via `prefers-color-scheme` in browser
-// TODO make the theme dot clickable
 
 function preformCalculation(operation){
     sessionStorage.setItem('operation', operation)
@@ -107,17 +104,17 @@ function toggleTheme(theme){
     if (theme == 1){
         document.querySelector('.toggle-dot').style["left"] = "2px"
         document.querySelector("body").id = "theme1"
-        localStorage.setItem("theme", 1)
+        localStorage.setItem(`prefers-color-scheme`, 1)
     }
     else if (theme == 2){
         document.querySelector('.toggle-dot').style["left"] = "23px"
         document.querySelector("body").id = "theme2"
-        localStorage.setItem("theme", 2)
+        localStorage.setItem(`prefers-color-scheme`, 2)
     }
     else if (theme == 3){
         document.querySelector('.toggle-dot').style["left"] = "52px"
         document.querySelector("body").id = "theme3"
-        localStorage.setItem("theme", 3)
+        localStorage.setItem(`prefers-color-scheme`, 3)
     }
 }
 

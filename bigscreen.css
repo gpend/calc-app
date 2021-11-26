@@ -68,7 +68,7 @@ body{
 #card{
     display:flex;
     flex-direction: column;
-    width: 600px;
+    width: 565px;
     margin: auto;
     border-radius: 15px;
 }
@@ -254,11 +254,11 @@ table{
     border-spacing: 20px;
     background-color: var(--calc-body-color);
     border-radius: inherit;
+    margin-top: 15px;
 }
 
 table td{
     width: 25%;
-    height: 2em;
     font-size: 2em;
 }
  
