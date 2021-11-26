@@ -56,16 +56,19 @@
   src: url('images/16_segments/16Segments-Basic.woff');}
 
 body{
-    width: 1440px;
+    width: 95vw;
+    height: 95vh;
     background-color: var(--main-background-color);
     font-family: 'Spartan', sans-serif;
     font-weight: 700;
+    display: flex;
+    place-items: center;
 }
 
 #card{
     display:flex;
     flex-direction: column;
-    width: 40%;
+    width: 600px;
     margin: auto;
     border-radius: 15px;
 }
